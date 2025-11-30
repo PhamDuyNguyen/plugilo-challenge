@@ -16,6 +16,10 @@ export default defineConfig(({ command, mode }) => {
   // Build mode - build widget library
   return {
     plugins: [react()],
+    define: {
+      'process.env.NODE_ENV': JSON.stringify('production'),
+      'process.env': '{}',
+    },
     build: {
       lib: {
         entry: './src/widget.tsx',

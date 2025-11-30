@@ -107,9 +107,13 @@
 &lt;wishlist-dock data-theme="dark"&gt;&lt;/wishlist-dock&gt;
             </div>
             
-            <p>Make sure to include the widget script before the closing &lt;/body&gt; tag:</p>
+            <p>Make sure to include the widget CSS and script before the closing &lt;/body&gt; tag:</p>
             
             <div class="code-block">
+&lt;!-- Include the CSS file --&gt;
+&lt;link rel="stylesheet" href="path/to/style.css"&gt;
+
+&lt;!-- Include the widget script --&gt;
 &lt;script type="module" src="path/to/wishlist-widget.js"&gt;&lt;/script&gt;
             </div>
         </div>
@@ -148,7 +152,20 @@
         </div>
     </div>
     
-    <!-- Widget will be loaded here -->
+    <!-- Widget CSS -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- Import maps for React and ReactDOM -->
+    <script type="importmap">
+    {
+        "imports": {
+            "react": "https://esm.sh/react@19",
+            "react-dom": "https://esm.sh/react-dom@19"
+        }
+    }
+    </script>
+    
+    <!-- Widget initialization script -->
     <script type="module">
         function setTheme(theme) {
             const widget = document.querySelector('wishlist-dock');
@@ -160,9 +177,12 @@
         // Make setTheme available globally
         window.setTheme = setTheme;
         
-        // For development, you can import the widget directly
-        // In production, this would be a built bundle
-        import('./src/widget.tsx');
+        // Load the built widget bundle (ES module format)
+        import('/wishlist-widget.js').then(() => {
+            console.log('Widget loaded successfully');
+        }).catch((error) => {
+            console.error('Error loading widget:', error);
+        });
     </script>
     
     <!-- Widget Element -->

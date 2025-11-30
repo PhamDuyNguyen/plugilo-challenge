@@ -2,6 +2,8 @@
 
 A modern, embeddable wishlist widget that allows users to organize content items into collections called "stacks" and manage them through an intuitive swipe-based interface.
 
+## Demo on: [https://plugilo-challenge.vercel.app/](https://plugilo-challenge.vercel.app/)
+
 ## 🚀 Features
 
 - **Dock Widget**: Floating button that expands into a panel
@@ -115,14 +117,6 @@ function App() {
 3. API Call → Background sync with backend
 4. Success → Confirm update
 5. Error → Rollback changes, show error message
-
-## 🐛 Known Limitations
-
-1. Mock API: Data is lost on page refresh
-2. Image Validation: No validation for image URLs
-3. Error Messages: Basic error handling
-4. Accessibility: Not fully WCAG compliant
-5. Browser Support: Modern browsers only
 
 ## 📄 License
 

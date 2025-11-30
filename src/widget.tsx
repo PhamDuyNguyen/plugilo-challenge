@@ -37,22 +37,9 @@ class WishlistDock extends HTMLElement {
   }
 
   private injectStyles() {
-    // Check if styles are already injected
-    if (document.getElementById('wishlist-widget-styles')) {
-      return;
-    }
-
-    // For development, styles are imported via CSS
-    // For production build, styles would be inlined here
-    const styleId = 'wishlist-widget-styles';
-    const existingStyle = document.getElementById(styleId);
-    if (!existingStyle) {
-      const link = document.createElement('link');
-      link.id = styleId;
-      link.rel = 'stylesheet';
-      link.href = '/src/index.css';
-      document.head.appendChild(link);
-    }
+    // Styles should be included separately by the consuming application
+    // This method is kept for potential future use but doesn't inject styles
+    // to avoid path resolution issues between dev and production builds
   }
 
   static get observedAttributes() {
