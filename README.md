@@ -2,7 +2,8 @@
 
 A modern, embeddable wishlist widget that allows users to organize content items into collections called "stacks" and manage them through an intuitive swipe-based interface.
 
-## Demo on: [https://plugilo-challenge.vercel.app/](https://plugilo-challenge.vercel.app/)
+## The page simulate to load widget on html file
+Demo on: [https://plugilo-challenge.vercel.app/demo.html](https://plugilo-challenge.vercel.app/demo.html)
 
 ## 🚀 Features
 
